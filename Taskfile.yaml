@@ -1,8 +1,10 @@
 
 docker login --username=eplegaspi
 
-docker build -t python-flask:v1 .
-docker image tag 10638272fa0b eplegaspi/python-flask:v1
-docker push eplegaspi/python-flask:v1
+docker build -t python-flask:v3 .
+docker run --name my-container -d -p 8080:8080 python-flask:v3
+
+docker image tag python-flask:v2 eplegaspi/python-flask:v2
+docker push eplegaspi/python-flask:v2
 
 gcloud compute scp --recurse legaspi-bigquery-transfer:/home/legaspi_edmond python-flask-docker
