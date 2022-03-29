@@ -1,8 +1,8 @@
 
 docker login --username=eplegaspi
 
-docker build -t python-flask:v3 .
-docker run --name my-container -d -p 8080:8080 python-flask:v3
+docker build -t python-flask:v4 .
+docker run --name my-container -d -p 8080:8080 python-flask:v4
 
 docker image tag python-flask:v2 eplegaspi/python-flask:v2
 docker push eplegaspi/python-flask:v2

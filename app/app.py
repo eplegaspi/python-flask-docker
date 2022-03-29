@@ -6,12 +6,12 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     try:
-        host_name = socket.gethostname()
-        host_ip = socket.gethostbyname(host_name)
-        return render_template('index.html', hostname=host_name, ip=host_ip)
+        return render_template('index.html')
     except:
         return render_template('error.html')
 
 
 if __name__ == "__main__":
     app.run(host='34.143.248.73', port=8080)
+
+
