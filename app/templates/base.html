@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1vice-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+ <title>{% block title %}{% endblock %}</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+ <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/search.css') }}">
+
+</head>
+
+<body>
+
+
+
+{% block body %}{% endblock %}
+
+ <!-- Bootstrap core JavaScript-->
+  <script type=text/javascript src="{{url_for('static', filename='js/vendor/jquery/jquery.min.js') }}"></script>
+  <script type=text/javascript src="{{url_for('static', filename='js/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+  <script type=text/javascript src="{{url_for('static', filename='js/js/sb-admin-2.min.js') }}"></script>
+  
+
+  <script type=text/javascript src="{{url_for('static', filename='js/actions.js') }}"></script>
+
+  <!-- <script type=text/javascript src="{{url_for('static', filename='js/search.js') }}"></script> -->
+  
+
+</body>
+</html>
