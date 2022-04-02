@@ -1,10 +1,15 @@
 
 docker login --username=eplegaspi
 
-docker build -t python-flask:v5 .
-docker run --name my-container -d -p 8080:8080 python-flask:v5
+docker build -t python-flask:v6 .
+docker start --name my-container -d -p 8080:8080 python-flask:v6
 
 docker image tag python-flask:v2 eplegaspi/python-flask:v2
 docker push eplegaspi/python-flask:v2
 
 gcloud compute scp --recurse legaspi-bigquery-transfer:/home/legaspi_edmond python-flask-docker
+
+== SET PYENV TO DEFAULT PYTHON ENV ==
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+echo 'eval "$(pyenv init --path)"' >> ~/.bash_profile
+source ~/.bash_profile
