@@ -1,5 +1,4 @@
 from flask import Flask,render_template
-import socket
 from flask_cors import CORS, cross_origin  # This is the magic
 
 
