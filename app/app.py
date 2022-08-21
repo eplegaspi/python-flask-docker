@@ -1,6 +1,6 @@
 from flask import Flask,render_template
 from flask_cors import CORS, cross_origin
-
+import socket
 
 app = Flask(__name__)
 CORS(app)
@@ -8,7 +8,7 @@ CORS(app)
 @app.route("/")
 def index():
     try:
-        return render_template('index.html')
+        return render_template('index.html', host_name=socket.gethostname())
     except:
         return render_template('error.html')
 
