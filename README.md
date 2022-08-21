@@ -206,3 +206,5 @@ docker run --rm -ti -p 5000:5000 --name flask1 foo
 
 docker-compose up --build --scale app=1 --remove-orphans 
 docker-compose up -d --build --scale app=3
+
+https://stackoverflow.com/questions/68449947/certbot-failing-acme-challenge-connection-refused
