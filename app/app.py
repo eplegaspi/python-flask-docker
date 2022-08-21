@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-from flask_cors import CORS, cross_origin  # This is the magic
+from flask_cors import CORS, cross_origin
 
 
 app = Flask(__name__)
@@ -16,8 +16,6 @@ def index():
 @app.route("/search")
 @cross_origin()
 def search():
-    
-
     try:
         return render_template('table_search.html')
     except:
