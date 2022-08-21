@@ -8,7 +8,7 @@ server {
 
         location / {
             include proxy_params;
-            proxy_pass http://34.143.248.73:5601;
+            proxy_pass http://app:5601;
         }
 }
 
